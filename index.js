@@ -28,7 +28,7 @@ AFRAME.registerComponent('orbit-controls', {
     rotateSpeed: {default: 0.05},
     screenSpacePanning: {default: false},
     target: {type: 'vec3'},
-    zoomSpeed: {default: 0.5}
+    zoomSpeed: {default: 0.5},
     // added by OX-IT: markos, 07 Mar 2019
     dampingFactorRotation: {default: 0.1},
     rotationA: {default: 0},
