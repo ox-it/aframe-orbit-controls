@@ -1,0 +1,106 @@
+{
+  "_args": [
+    [
+      "aframe-orbit-controls@1.2.0",
+      "/Users/markdoub/projects/cabinet-AR"
+    ]
+  ],
+  "_from": "aframe-orbit-controls@1.2.0",
+  "_id": "aframe-orbit-controls@1.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-g3j3Z3Lpf+LxIuNUwteVcB+eJ5jXwYEEzHbbRhdCJ754a9yqlvjt4tjvBq56F5ilpsg/bNUi8cjza8FFvJfd5g==",
+  "_location": "/aframe-orbit-controls",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "aframe-orbit-controls@1.2.0",
+    "name": "aframe-orbit-controls",
+    "escapedName": "aframe-orbit-controls",
+    "rawSpec": "1.2.0",
+    "saveSpec": null,
+    "fetchSpec": "1.2.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/aframe-orbit-controls/-/aframe-orbit-controls-1.2.0.tgz",
+  "_spec": "1.2.0",
+  "_where": "/Users/markdoub/projects/cabinet-AR",
+  "author": {
+    "name": "Kevin Ngo",
+    "email": "me@ngokevin.com"
+  },
+  "bugs": {
+    "url": "https://github.com/ngokevin/kframe/issues"
+  },
+  "description": "Orbit controls for A-Frame.",
+  "devDependencies": {
+    "aframe": "*",
+    "browserify": "^13.0.0",
+    "budo": "^8.2.2",
+    "chai": "^3.4.1",
+    "chai-shallow-deep-equal": "^1.3.0",
+    "ghpages": "^0.0.8",
+    "karma": "^0.13.15",
+    "karma-browserify": "^4.4.2",
+    "karma-chai-shallow-deep-equal": "0.0.4",
+    "karma-chrome-launcher": "2.0.0",
+    "karma-env-preprocessor": "^0.1.1",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-mocha": "^0.2.1",
+    "karma-mocha-reporter": "^1.1.3",
+    "karma-sinon-chai": "^1.1.0",
+    "mocha": "^2.3.4",
+    "randomcolor": "^0.4.4",
+    "semistandard": "^8.0.0",
+    "shelljs": "^0.7.0",
+    "shx": "^0.1.1",
+    "sinon": "^1.17.5",
+    "sinon-chai": "^2.8.0",
+    "snazzy": "^4.0.0",
+    "uglify-es": "github:mishoo/UglifyJS2#harmony",
+    "webpack": "^2.7.0"
+  },
+  "homepage": "https://github.com/ngokevin/kframe#readme",
+  "keywords": [
+    "aframe",
+    "aframe-component",
+    "aframe-vr",
+    "vr",
+    "mozvr",
+    "webvr",
+    "orbit-controls"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "aframe-orbit-controls",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngokevin/kframe.git"
+  },
+  "scripts": {
+    "build": "webpack index.js dist/aframe-orbit-controls.js",
+    "dev": "budo index.js:dist/aframe-orbit-controls.min.js --port 7000 --live --open",
+    "dist": "npm run build && uglifyjs dist/aframe-orbit-controls.js > dist/aframe-orbit-controls.min.js",
+    "ghpages": "ghpages",
+    "lint": "semistandard -v | snazzy",
+    "prepublish": "npm run dist",
+    "start": "npm run dev",
+    "test": "karma start ./tests/karma.conf.js",
+    "test:chrome": "karma start ./tests/karma.conf.js --browsers Chrome",
+    "test:firefox": "karma start ./tests/karma.conf.js --browsers Firefox"
+  },
+  "semistandard": {
+    "globals": [
+      "AFRAME",
+      "THREE"
+    ],
+    "ignore": [
+      "examples/build.js",
+      "dist/**"
+    ]
+  },
+  "unpkg": "dist/aframe-orbit-controls.min.js",
+  "version": "1.2.0"
+}
