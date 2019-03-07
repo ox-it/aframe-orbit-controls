@@ -29,6 +29,10 @@ AFRAME.registerComponent('orbit-controls', {
     screenSpacePanning: {default: false},
     target: {type: 'vec3'},
     zoomSpeed: {default: 0.5}
+    // added by OX-IT: markos, 07 Mar 2019
+    dampingFactorRotation: {default: 0.1},
+    rotationA: {default: 0},
+    rotationB: {default: 0}
   },
 
   init: function () {
@@ -112,6 +116,10 @@ AFRAME.registerComponent('orbit-controls', {
     controls.rotateSpeed = data.rotateSpeed;
     controls.screenSpacePanning = data.screenSpacePanning;
     controls.zoomSpeed = data.zoomSpeed;
+    // added by OX-IT: markos, 07 Mar 2019
+    controls.dampingFactorRotation = data.dampingFactorRotation;
+    controls.rotationA = data.rotationA;
+    controls.rotationB = data.rotationB;
   },
 
   tick: function () {
