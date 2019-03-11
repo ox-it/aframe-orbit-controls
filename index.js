@@ -93,8 +93,9 @@ AFRAME.registerComponent('orbit-controls', {
   update: function (oldData) {
     var controls = this.controls;
     var data = this.data;
-
-    controls.target = this.target.copy(data.target);
+    if ((controls.target.x == 0 && controls.target.y == 0 && controls.target.z == 0)) {
+        controls.target = this.target.copy(data.target);
+    }
     controls.autoRotate = data.autoRotate;
     controls.autoRotateSpeed = data.autoRotateSpeed;
     controls.dampingFactor = data.dampingFactor;
